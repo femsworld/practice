@@ -16,6 +16,14 @@ export default function Textform(props) {
     setText(newText);
   }
 
+  const handleLowClick = ()=>{
+    console.log('Lowercase clicked');
+    // setText('You have clicked on the Uppercase button');
+    let newText = text.toLowerCase();
+    setText(newText);
+  }
+
+
   return (
     <div>
         <div className="container">
@@ -29,6 +37,13 @@ export default function Textform(props) {
           onChange={handleOnChange}
         ></textarea>
         <button type="button" className="btn btn-primary my-3" onClick={handleUpClick}>Uppercase</button>
+        <button type="button" className="btn btn-primary my-3 mx-2" onClick={handleLowClick}>Lowercase</button>
+      </div>
+      {/* Counting words and character */}
+      <div className='container my-3'>
+          <h1>Your text summary</h1>
+          <p>{text.split(' ').length} word and {text.length} characters</p>
+          <p>{0.008 * text.split(' ').length} minutes to read</p>
       </div>
         </div>
      
