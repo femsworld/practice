@@ -23,6 +23,14 @@ export default function Textform(props) {
     setText(newText);
   }
 
+  const handleClearClick = ()=>{
+    console.log('ClearButton clicked');
+    // setText('You have clicked on the Uppercase button');
+    let newText = '';
+    setText(newText);
+  }
+
+
 
   return (
     <div>
@@ -38,6 +46,7 @@ export default function Textform(props) {
         ></textarea>
         <button type="button" className="btn btn-primary my-3" onClick={handleUpClick}>Uppercase</button>
         <button type="button" className="btn btn-primary my-3 mx-2" onClick={handleLowClick}>Lowercase</button>
+        <button type="button" className="btn btn-primary my-3 mx-2" onClick={handleClearClick}>Clear Text</button>
       </div>
       {/* Counting words and character */}
       <div className='container my-3'>
