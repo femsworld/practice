@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
+import About from './components/About';
 import Navbar from './components/Navbar';
 import Textform from './components/Textform';
 
@@ -9,7 +10,8 @@ function App() {
     <>
     {/* <Navbar title= 'Practice project' aboutText= 'About Us'/> */}
     <Navbar/>
-    <Textform heading = 'Text Area'/>
+    {/* <Textform heading = 'Text Area'/> */}
+    <About/>
     </>
   );
 }
