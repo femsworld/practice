@@ -11,10 +11,11 @@ function App() {
 
   const toggleMode = ()=> {
     if (mode === 'light') {
-      setMode('dark')
-      
+      setMode('dark');
+      document.body.style.backgroundColor = 'grey';
     } else {
-      setMode('light')
+      setMode('light');
+      document.body.style.backgroundColor = 'white'
     }
   }
 
@@ -22,7 +23,7 @@ function App() {
     <>
     {/* <Navbar title= 'Practice project' aboutText= 'About Us'/> */}
     <Navbar mode={mode} toggleMode={toggleMode}/>
-    <Textform heading = 'Text Area'/>
+    <Textform heading = 'Text Area' mode={mode}/>
     {/* <About/> */}
     </>
   );
