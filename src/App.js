@@ -9,7 +9,7 @@ function App() {
     <>
     {/* <Navbar title= 'Practice project' aboutText= 'About Us'/> */}
     <Navbar/>
-    <Textform/>
+    <Textform heading = 'Text Area'/>
     </>
   );
 }
